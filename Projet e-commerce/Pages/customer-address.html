@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/jquery-ui.min.css">
+    <link rel="stylesheet" href="../CSS/custormer-address.css">
+    <title>Wintershop - Mes adresses</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid justify-content-around row mx-auto pt-5">
+            <figure>
+                <a href="../index.html"><img src="../images/logo.png" alt="logo" class="img-fluid"></a>
+            </figure>
+
+            <div class="ui-widget mt-1">
+                <input id="tags" placeholder="Recherche" autofocus class="pl-2 mt-5">
+            </div>
+
+            <figure class="mt-2">
+                <a href="cart.html"><img src="../images/panier.png" width="90" alt="panier" title="panier" class="img-fluid mt-4"></a>
+            </figure>
+        </div>
+        <div class="text-right mr-3">
+            <a href="connexion.html"><button type="button" class="btn btn-outline-light btn-sm mb-3">Connexion</button></a>
+        </div>
+    </header>
+    <div class="centre container-fluid">
+        <div class="row justify-content-center">
+            <div class=" col-lg-6">
+                <div class=" row">
+                    <div class=" col-lg-3">
+                        <ul id="menu">
+                            <li class="ui-widget-header">
+                                <div class="cat mt-3 mb-3 text-center">Mon espace client</div>
+                            </li>
+                            <li>
+                                <div class="mt-5 mb-5 text-center"><a href="customer-infos.html">Mes infos</a></div>
+                            </li>
+                            <li>
+                                <div class="mt-5 mt-5 text-center"><a href="customer-address.html">Mes adresses</a></div>
+                            </li>
+                            <li>
+                                <div class="mt-5 mb-5 text-center"><a href="customer-orders.html">Mes commandes</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 align-self-center" id="tableau">
+                        <table class="table table-bordered table-hover col-lg-12 text-center">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">Nom de l’adresse</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="btn-group1">1</th>
+                                    <td class="btn-group1">Maison</td>
+                                    <td class="btn-group1">
+                                        <div class="btn-group1" id="bouton" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn-popin1 btn-dark btn-lg active btn-dark btn-sm" role="button" aria-pressed="true">Détail</button>
+                                            <button type="button" class="btn-mod1 btn-primary btn-lg active btn-primary btn-sm" role="button" aria-pressed="true">Modifier</button>
+                                            <button type="button" class="btn-sup1 btn-danger btn-lg active btn-danger btn-sm" role="button" aria-pressed="true">Supprimer</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="btn-group2">2</th>
+                                    <td class="btn-group2">Travail</td>
+                                    <td class="btn-group2">
+                                        <div class="btn-group2" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn-popin2 btn-dark btn-lg active btn-dark btn-sm" role="button" aria-pressed="true">Détail</button>
+                                            <button type="button" class="btn-mod2 btn-primary btn-lg active btn-primary btn-sm" role="button" aria-pressed="true">Modifier</button>
+                                            <button type="button" class="btn-sup2 btn-danger btn-lg active btn-danger btn-sm" role="button" aria-pressed="true">Supprimer</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="btn-group3">3</th>
+                                    <td class="btn-group3">Livraison</td>
+                                    <td class="btn-group3">
+                                        <div class="btn-group3" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn-popin3 btn-dark btn-lg active btn-dark btn-sm" role="button" aria-pressed="true">Détail</button>
+                                            <button type="button" class="btn-mod3 btn-primary btn-lg active btn-primary btn-sm" role="button" aria-pressed="true">Modifier</button>
+                                            <button type="button" class="btn-sup3 btn-danger btn-lg active btn-danger btn-sm" role="button" aria-pressed="true">Supprimer</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <div id="dialog" title="Adresse Postale">
+                                <form>
+                                    <fieldset class="adresse">
+                                        <legend id="titre" class="text-center"></legend>
+                                        <div class="form-group row mt-4">
+                                            <label for="nom" class="col-lg-6 col-form-label">Nom:</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="nom" class="form-control" id="nom">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="prénom" class="col-lg-6 col-form-label">Prénom:</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="prénom" class="form-control" id="prénom">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-4">
+                                            <label for="numer" class="col-lg-6 col-form-label">N°:</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="numero" class="form-control" id="numero">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="rue" class="col-lg-6 col-form-label">Rue:</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="rue" class="form-control" id="rue">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mt-4">
+                                            <label for="cp" class="col-lg-6 col-form-label">CP:</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="cp" class="form-control" id="cp">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="ville" class="col-lg-6 col-form-label">Ville</label>
+                                            <div class="col-lg-6 pl-0">
+                                                <input type="ville" class="form-control" id="ville">
+                                            </div>
+                                        </div>
+                                        <label for="pays">Pays:</label>
+                                        <select class="float-right" name="pays" id="pays">
+                                        <option value="pays">choisir votre pays</option>
+                                        <option value="pays">Albanie</option>
+                                        <option value="pays">Algérie</option>
+                                        <option value="renault">Allemagne</option>
+                                        <option value="citroën">Andorre</option>
+                                        <option value="pays">Autriche</option>
+                                        <option value="pays">Belgique</option>
+                                        <option value="pays">Biélorussie</option>
+                                        <option value="pays">Bosnie-Herzégovine</option>
+                                        <option value="pays">Brésil</option>
+                                        <option value="pays">Bulgarie</option>
+                                        <option value="pays">Chine</option>
+                                        <option value="pays">Chypre</option>
+                                        <option value="pays">Croatie</option>
+                                        <option value="pays">Danemark</option>
+                                        <option value="pays">Espagne</option>
+                                        <option value="pays">Estonie</option>
+                                        <option value="pays">Etats-Unis</option>
+                                        <option value="pays">Finlande</option>
+                                        <option value="pays">France</option>
+                                        <option value="pays">Grèce</option>
+                                        <option value="pays">Hongrie</option>
+                                        <option value="pays">Irlande</option>
+                                        <option value="pays">Islande</option>
+                                        <option value="pays">Italie</option>
+                                        <option value="pays">Japon</option>
+                                        <option value="pays"> Kazakhstan</option>
+                                        <option value="pays"> Kosovo</option>
+                                        <option value="pays">Lettonie</option>
+                                        <option value="pays">Liechtenstein</option>
+                                        <option value="pays">Lituanie</option>
+                                        <option value="pays">Luxembourg</option>
+                                        <option value="pays">Macédoine du Nord</option>
+                                        <option value="pays">Malte</option>
+                                        <option value="pays">Maroc</option>
+                                        <option value="pays">Moldavie</option>
+                                        <option value="pays">Monaco</option>
+                                        <option value="pays">Monténégro</option>
+                                        <option value="pays">Norvège</option>
+                                        <option value="pays">Pays-Bas</option>
+                                        <option value="pays">Pologne</option>
+                                        <option value="pays">Portugal</option>
+                                        <option value="pays">République tchèque</option>
+                                        <option value="pays">Roumanie</option>
+                                        <option value="pays">Royaume-Uni</option>
+                                        <option value="pays">Russie</option>
+                                        <option value="pays">Saint-Marin</option>
+                                        <option value="pays">Serbie</option>
+                                        <option value="pays">Slovaquie</option>
+                                        <option value="pays">Slovénie</option>
+                                        <option value="pays">Suède</option>
+                                        <option value="pays">Suisse</option>
+                                        <option value="pays">Tunisie</option>
+                                        <option value="pays">Turquie</option>
+                                        <option value="pays">Ukraine</option>
+                                        <option value="pays">Vatican</option>
+                                    </select>
+                                    </fieldset>
+                                    <button type="button" id="valider" class="btn btn-outline-success float-lg-right mt-3 mb-3">Valider</button>
+                                </form>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid justify-content-around row mx-auto p-5">
+            <figure>
+                <a href="https://fr-fr.facebook.com/"><img src="https://allaboutbasic.files.wordpress.com/2018/02/fb.jpg" alt="logo-facebook"></a>
+            </figure>
+            <figure>
+                <a href="https://twitter.com/?lang=fr"><img src="https://allaboutbasic.files.wordpress.com/2018/02/twitter.jpg" alt="logo-twitter"></a>
+            </figure>
+            <figure>
+                <a href="https://www.instagram.com/?hl=fr"><img src="https://allaboutbasic.files.wordpress.com/2018/02/instagram.jpg" alt="logo-instagram"></a>
+            </figure>
+            <figure>
+                <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faboutme.google.com%2Fu%2F0%2F%3Freferer%3Dgplus&followup=https%3A%2F%2Faboutme.google.com%2Fu%2F0%2F%3Freferer%3Dgplus&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://allaboutbasic.files.wordpress.com/2018/02/gplus.jpg" alt="logo-google-plus"></a>
+            </figure>
+            <figure>
+                <a href="https://www.pinterest.fr/"><img src="https://allaboutbasic.files.wordpress.com/2018/02/pinterest.jpg" alt="logo-pinterest"></a>
+            </figure>
+        </div>
+        <div class="container-fluid row p-5">
+            <div class=" col-lg-4 text-center pl-5">
+                <a class="cgv" href="qui-sommes-nous.html">Qui sommes nous ?</a>
+            </div>
+            <div class=" col-lg-4 text-center pl-5 pr-5">
+                <a class="cgv" href="conditions-general.html">Conditions Générales de Vente</a>
+            </div>
+            <div class=" col-lg-4 text-center pr-5">
+                <a class="cgv" href="mentions-legales.html">Mentions légales</span></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+    <script src="../CSS/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="../JS/jquery-ui.min.js"></script>
+    <script src="../JS/customer-address.js"></script>
+</body>
+
+</html>

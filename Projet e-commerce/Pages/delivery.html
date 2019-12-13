@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/jquery-ui.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <title>Wintershop - Transport</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid justify-content-around row mx-auto pt-5">
+            <figure>
+                <a href="../index.html"><img src="../images/logo.png" alt="logo" class="img-fluid"></a>
+            </figure>
+            <div class="ui-widget mt-1">
+                <form action="" method="get">
+                    <input id="tags" placeholder="Recherche" autofocus class="pl-2 mt-5">
+                </form>
+            </div>
+            <figure class="mt-2">
+                <a href="cart.html"><img src="../images/panier.png" width="90" alt="panier" title="panier" class="img-fluid mt-4"></a>
+            </figure>
+        </div>
+        <div class="text-right mr-3">
+            <a href="connexion.html"><button type="button" class="btn btn-outline-light btn-sm mb-3">Connexion</button></a>
+        </div>
+    </header>
+    <h1 class="text-center mt-5">Transport</h1>
+    <div class="container-fluid mb-5 mt-5">
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Image du produit</th>
+                    <th scope="col">Nom du produit</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Sous-total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ligne1">
+                    <th scope="row"><img src="../images/nouveauté/Lunettehomme1.jpeg" class="img-fluid" width="100" alt=""></th>
+                    <td>Lunettes Nordique Bliz Fusion Matt Black</td>
+                    <td class="price">89.90 <span>€</span></td>
+                    <td class="quantite">1</td>
+                    <td><span class="soustotal st1"></span><span> €</span></td>
+                </tr>
+                <tr class="ligne2">
+                    <th scope="row"><img src="../images/nouveauté/Veste13.jpeg" class="img-fluid" width="100" alt=""></th>
+                    <td>Blouson Ski Picture Kodiak Black</td>
+                    <td class="price">229.90 <span>€</span></td>
+                    <td class="quantite">2</td>
+                    <td><span class="soustotal st2"></span><span> €</span></td>
+                </tr>
+                <tr>
+                    <th class="text-right" scope="row" colspan="4">Grand total: </th>
+                    <td><span class="grandtotal"></span><span>€</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container text-justify mb-5 mt-5">
+        <form action="" method="post">
+            <div id="accordion">
+                <h3>1. LA LIVRAISON EXPRESS (SANS RENDEZ-VOUS) <span class="pl-5">20 €</span></h3>
+                <div>
+                    <p class="pb-4">
+                        Livraison sous 24 à 72h ouvrables et sans RDV à compter de l'expédition de la commande, pour des colis n'excédant pas un poids total de 30kg. L'évolution et le jour de livraison estimé sont visibles grâce au lien communiqué par e-mail le jour de l'expédition
+                        de la commande. En cas d’absence le jour de livraison, un avis de passage est déposé dans la boîte aux lettres ou est envoyé par e-mail, indiquant le point relais ou le bureau de poste le plus proche pour y retirer la commande.
+                        Un deuxième passage est également possible selon le livreur.
+                    </p>
+                    <input class="chckbox" type="radio" name="trans" id="trans" checked>
+                    <label for="trans">Je choisis ce mode de transport.</label>
+                </div>
+                <h3>2. LA LIVRAISON ÉCO À DOMICILE (AVEC RENDEZ-VOUS)<span class="pl-5">10 €</span></h3>
+                <div>
+                    <p class="pb-4">
+                        Une prise de rendez-vous, avec une créneau horaire de 2h à 4h est effectuée par mail, par SMS ou par téléphone, entre 48h et 72h après l'expédition de la commande. Cette livraison demande en moyenne 5 à 10 jours ouvrés à compter du départ des colis et
+                        n'excédant pas un poids total de 70 kg. Ces jours peuvent varier selon le rendez-vous planifié et les disponibilités du client et du transporteur.<br> Le livreur dépose l’ensemble des colis au pas de la
+                        porte ou au pied de l'immeuble, sous réserve d'accessibilité.
+                    </p>
+                    <input class="chckbox" type="radio" name="trans" id="trans">
+                    <label for="trans">Je choisis ce mode de transport.</label>
+                </div>
+                <h3>3. LA LIVRAISON SPÉCIALISÉE À DOMICILE (AVEC RENDEZ-VOUS)<span class="pl-5">15 €</span></h3>
+                <div>
+                    <p class="pb-4">
+                        Une prise de rendez-vous, avec un créneau horaire de 2h à 4h, est effectuée par mail, par SMS ou par téléphone, entre 48h et 72h après l'expédition de la commande. Cette livraison demande en moyenne 5 à 10 jours ouvrés à compter du départ des colis, pouvant
+                        varier selon le rendez-vous planifié et les disponibilités du client et du transporteur. Les colis sont déposés par 2 livreurs, ou plus, dans la pièce souhaitée (située au maximum au 3ème étage, avec ou sans ascenseur). Le client
+                        devra s’assurer du bon passage des colis entre le camion et l’emplacement final. Le déballage des colis concerne uniquement les produits déjà montés, et non en kit.
+                    </p>
+                    <input class="chckbox" type="radio" name="trans" id="trans">
+                    <label for="trans">Je choisis ce mode de transport.</label>
+                </div>
+                <h3>4. LE RETRAIT EN POINTS RELAIS<span class="pl-5">5 €</span></h3>
+                <div>
+                    <p>
+                        La livraison au point relais se fera à l'adresse choisie par le client lors de la commande. Ce dernier aura la possibilité de choisir une adresse parmi les adresses proposées lors de la commande.
+                    </p>
+                    <p class="pb-4">
+                        Cette formule n'exige pas de prise de rendez-vous, et le client sera alors directement informé par sms et/ou par e-mail lors de la disponibilité du colis (pour un poids de 130kg maximum) dans le point relais le plus proche. Dès le dépôt du/des colis au
+                        point relais, le client dispose de 8 jours calendaires pour retirer sa commande. Sans intervention du client, la commande sera retournée à l'expéditeur, impliquant des frais supplémentaires à sa charge.
+                    </p>
+                    <input class="chckbox" type="radio" name="trans" id="trans">
+                    <label for="trans">Je choisis ce mode de transport.</label>
+                </div>
+                <h3>5. LE RETRAIT GRATUIT À NOTRE ENTREPÔT (UNIQUEMENT EN BELGIQUE)</h3>
+                <div>
+                    <p class="pb-4">
+                        Le client peut se présenter en magasin pour le retrait gratuit de la commande en respectant la date fixée par l'enseigne au préalable. Ce service est disponible uniquement en Belgique.
+                    </p>
+                    <input class="chckbox" type="radio" name="trans" id="trans">
+                    <label for="trans">Je choisis ce mode de transport.</label>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="payment.html"><button type="button" class="btn btn-success">Valider</button></a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <!--Liens sociaux-->
+        <div class="container-fluid justify-content-around row mx-auto p-5">
+            <figure>
+                <a href="https://fr-fr.facebook.com/"><img src="https://allaboutbasic.files.wordpress.com/2018/02/fb.jpg" alt="logo-facebook"></a>
+            </figure>
+            <figure>
+                <a href="https://twitter.com/?lang=fr"><img src="https://allaboutbasic.files.wordpress.com/2018/02/twitter.jpg" alt="logo-twitter"></a>
+            </figure>
+            <figure>
+                <a href="https://www.instagram.com/?hl=fr"><img src="https://allaboutbasic.files.wordpress.com/2018/02/instagram.jpg" alt="logo-instagram"></a>
+            </figure>
+            <figure>
+                <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faboutme.google.com%2Fu%2F0%2F%3Freferer%3Dgplus&followup=https%3A%2F%2Faboutme.google.com%2Fu%2F0%2F%3Freferer%3Dgplus&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://allaboutbasic.files.wordpress.com/2018/02/gplus.jpg" alt="logo-google-plus"></a>
+            </figure>
+            <figure>
+                <a href="https://www.pinterest.fr/"><img src="https://allaboutbasic.files.wordpress.com/2018/02/pinterest.jpg" alt="logo-pinterest"></a>
+            </figure>
+        </div>
+
+    </footer>
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+    <script src="../CSS/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="../JS/jquery-ui.min.js"></script>
+    <script src="../JS/fichier2.js"></script>
+</body>
+
+</html>

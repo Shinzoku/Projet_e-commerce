@@ -1,0 +1,231 @@
+header,
+footer,
+.maximenu {
+    background-color: #8ba9c7;
+}
+
+header input {
+    border-radius: 5px;
+}
+
+.maximenu {
+    border: 1px solid #9aebff;
+    font-weight: bold;
+}
+
+#homme,
+#femme,
+#enfant,
+#accessoires {
+    cursor: pointer;
+}
+
+.homme,
+.femme,
+.enfant,
+.accessoires {
+    background-color: #9aebff;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    z-index: 100;
+}
+
+.homme ul li,
+.femme ul li,
+.enfant ul li,
+.accessoires ul li {
+    list-style: none;
+}
+
+.homme ul a,
+.femme ul a,
+.enfant ul a,
+.accessoires a {
+    color: black;
+}
+
+.homme ul a:hover,
+.femme ul a:hover,
+.enfant ul a:hover,
+.accessoires a:hover {
+    color: #e65324;
+    text-decoration: none;
+}
+
+.imagehomme,
+.imagefemme,
+.imageenfant,
+.imageaccesoires {
+    margin: 0px;
+}
+
+.soustitre {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline red;
+}
+
+.minimenu,
+.blocfemme,
+.blocenfant,
+.blochomme {
+    border: 1px solid #8ba9c7;
+    margin: 0px;
+}
+
+.minimenu {
+    border-radius: 10px 10px 0px 0px;
+    background-color: #8ba9c7;
+}
+
+.blocfemme,
+.blocenfant,
+.blochomme {
+    border-radius: 0px 0px 10px 10px;
+}
+
+#meilleursvente,
+#produitsenpromo,
+#nouveautés {
+    border: 1px solid #9aebff;
+    padding: 15px 40px;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.minimenuarticles {
+    cursor: pointer;
+}
+
+
+/* ======================================================FIN DE LA PAGE INDEX=============================================================== */
+
+
+/* ====================================================DEBUT DE LA PAGE PRODUCT============================================================= */
+
+.image1,
+.image2,
+.image3,
+.vueimage1,
+.vueimage2,
+.vueimage3 {
+    border: 1px solid black;
+}
+
+.image1,
+.image2,
+.image3 {
+    cursor: pointer;
+}
+
+.details {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline black;
+}
+
+.details- {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline black;
+}
+
+.caracteristiques {
+    font-weight: bold;
+    text-decoration: underline black;
+}
+
+.prix {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+}
+
+.annonceprix {
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.ajouterpanier {
+    border: 1px solid red;
+    width: 400px;
+    height: 150px;
+}
+
+
+/* =================================================FIN DE LA PAGE PRODUCT====================================================== */
+
+
+/* ===========================================DEBUT DE LA PAGE CART / ORDER-DETAIL============================================== */
+
+.table {
+    background-color: #8ba9c7;
+    font-size: 1.5rem;
+}
+
+.adrLiv,
+.adrFac {
+    border: 1px solid #8ba9c7;
+    padding: 5px;
+}
+
+.adrFac h4,
+.adrLiv h4 {
+    background-color: #9aebff;
+}
+
+
+/* ====================================================FIN DE LA PAGE CART====================================================== */
+
+
+/* ==================================================DEBUT DE LA PAGE PAYMENT=================================================== */
+
+.formulairePaiement {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#message {
+    border: 1px solid green;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+
+/* ===================================================FIN DE LA PAGE PAYMENT==================================================== */
+
+
+/* ==================================================DEBUT DE LA PAGE DELIVERY================================================== */
+
+#accordion {
+    font-size: 1rem;
+}
+
+.chckbox {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* ===================================================FIN DE LA PAGE DELIVERY==================================================== */
+
+
+/* ==========================================DEBUT DE LA PAGE CONNEXION / INSCRIPTION============================================ */
+
+.formCon,
+.formIns {
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.inscription {
+    color: dimgray;
+    text-decoration: underline dimgray;
+    cursor: pointer;
+}
